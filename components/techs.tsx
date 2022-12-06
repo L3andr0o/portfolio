@@ -68,17 +68,18 @@ const Wrapper = styled.div`
   width: fit-content;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   /* flex-direction: column; */
   flex-wrap: wrap;
   margin-top: 20px;
   overflow: hidden;
+  width: 100%;
   .tech{
     &.Javascript{background-color: #f7e018;}
     &.Typescript{background-color: #017acb;}
-    width: 40%;
+    width: 45%;
     text-align: center;
-    margin: 8px;
+    margin: 10px 0;
     border-radius: 5px;
     position: relative;
     overflow: hidden;

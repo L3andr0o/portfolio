@@ -8,6 +8,7 @@ import 'react-typed/dist/animatedCursor.css';
 import CodeLogo from '../assets/CodeLogo.png';
 import Description from '../components/description'
 import Techs from '../components/techs'
+import ProjectCard from '../components/projectCard'
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
           <Image src={CodeLogo} alt={'code'} width={25} height={25}/>
           My Projects
         </h1>
+        <ProjectCard />
       </div>
     </Wrapper>
   )

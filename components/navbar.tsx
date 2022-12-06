@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 5em;
   background-color: #18181b;
-  padding: 0 20px;
+  padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,8 +65,8 @@ const Wrapper = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: right;
-    animation: show .3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 normal forwards;
-    @keyframes show {
+    animation: sho .3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 normal forwards;
+    @keyframes sho {
       0%{transform: scaleX(0);}
       100%{transform:scaleX(1);}
     }
