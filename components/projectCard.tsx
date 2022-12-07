@@ -1,26 +1,27 @@
 import styled from "styled-components";
-import Image from "next/image";
-import TasksManager from '../assets/TasksManager.png';
-import ReactJs from '../assets/React.png';
-import Typescript from '../assets/Typescript.svg';
-import Firebase from '../assets/Firebase.png';
+import Image, { StaticImageData } from "next/image";
 
+interface Props{
+  img : StaticImageData,
+  name : string,
+  subt : string,
+  description : string,
+  techs : StaticImageData[]
+}
 
-export default function ProjectCard(){
+export default function ProjectCard({img,name,subt,description,techs} : Props){
   return(
     <Wrapper>
-      <Image src={TasksManager} alt='project' width={200} height={180} className='project-img'/>
+      <Image src={img} alt='project' width={200} height={180} className='project-img'/>
       <div className="project-info">
-        <h2>Task Manager</h2>
-        <span>This is a task manager</span>
-        <p>
-        This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.
-        </p>
+        <h2>{name}</h2>
+        <span>{subt}</span>
+        <p>{description}</p>
       </div>
       <div className="techs-used">
-        <Image src={ReactJs} alt='react' width={20} height={20}/>
-        <Image src={Typescript} alt='react' width={20} height={20}/>
-        <Image src={Firebase} alt='react' width={20} height={20}/>
+        {techs.map((tech)=>(
+          <Image src={tech} alt='tech' width={20} height={20}/>
+        ))}
       </div>
     </Wrapper>
   )

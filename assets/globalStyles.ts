@@ -8,6 +8,9 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     font-family: 'Lato';
     list-style: none;
+    &:visited{
+      color: #fff;
+    }
   }
   body{
     /* overflow: hidden; */
