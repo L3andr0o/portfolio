@@ -9,10 +9,10 @@ import CodeLogo from '../assets/CodeLogo.png';
 import Description from '../components/description'
 import Techs from '../components/techs'
 import ProjectCard from '../components/projectCard'
-import TasksManager from '../assets/TasksManager.png';
-import CountriesApp from '../assets/CountriesApp.png';
-import RockPaperScissors from '../assets/RockPaperScissors.png';
-import SpaceTourismWeb from '../assets/SpaceTourismWeb.png';
+import TasksManager from '../assets/TasksManager.jpg';
+import CountriesApp from '../assets/CountriesApp.jpg';
+import RockPaperScissors from '../assets/RockPaperScissors.jpg';
+import SpaceTourismWeb from '../assets/SpaceTourismWeb.jpg';
 import ReactJs from '../assets/React.png';
 import Typescript from '../assets/Typescript.svg';
 import Firebase from '../assets/Firebase.png';
@@ -28,7 +28,6 @@ import Footer from '../components/footer'
 
 
 export default function Home() {
-
   return (
     <Wrapper>
       <GlobalStyles />
