@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   .content{
     width: 90%;
     margin: 0 auto;
-    max-width: 990px;
+    max-width: 1090px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

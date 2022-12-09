@@ -5,14 +5,12 @@ import { GlobalStyles } from "../assets/globalStyles"
 
 export default function Navbar(){
 
-  const [menuState,setMenuState] = useState<boolean>(false);
+  const [menuState,setMenuState] = useState<boolean | null>(null);
 
   return(
     <Wrapper>
       <GlobalStyles />
-      {
-      menuState &&
-      <div className="left burger">
+      <div className={`left burger ${menuState}`}>
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" onClick={()=>setMenuState(false)}>
           <g fill="#828FA3" fillRule="evenodd">
             <path d="m12.728 0 2.122 2.122L2.122 14.85 0 12.728z"/>
@@ -25,7 +23,8 @@ export default function Navbar(){
           <li>Projects</li>
           <li>Resume</li>
         </ul>
-      </div>}
+      </div>
+      
       <div className="rigth">
         <span>EN</span>
       </div>
@@ -34,6 +33,7 @@ export default function Navbar(){
           <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/>
         </g>
       </svg>
+     {menuState && <div className="bg" onClick={()=>setMenuState(false)}></div>}
     </Wrapper>
   )
 }
@@ -48,40 +48,73 @@ const Wrapper = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid #3338;
   color: #fff;
+  /* position: relative; */
+  .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0005;
+  }
   svg{
     scale: .8;
+    @media (min-width: 720px) {
+      display: none;
+    }
+  }
+  .left{
+    @media (min-width: 720px) {
+      width: 40%;
+      max-width: 20em;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
   }
   .burger{
-    position: absolute;
-    background-color: #37373a;
-    color: #fff;
-    top: 0;
-    right: 0;
-    width: 60vw;
-    height: 100vh;
-    z-index: 20;
-    text-align: right;
-    padding: 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: right;
-    animation: sho .3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 normal forwards;
-    @keyframes sho {
-      0%{transform: scaleX(0);}
-      100%{transform:scaleX(1);}
-    }
-    svg{
+    @media (max-width:719px) {
       position: absolute;
-      top: 32px;
-      right: 20px;
-      scale: 1.2;
-    }
-    ul{
-      height: 15em;
+      background-color: #37373a;
+      color: #fff;
+      top: 0;
+      right: 0;
+      width: 60vw;
+      max-width: 20em;
+      height: 100vh;
+      z-index: 20;
+      text-align: right;
+      padding: 20px;
+      z-index: 2;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-top: 80px;
+      align-items: flex-start;
+      justify-content: right;
+      &.null,&.false{
+        display: none;
+      }
+      &.true{
+        animation: sho .3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 normal forwards;
+        @keyframes sho {
+          0%{transform: scaleX(0);}
+          100%{transform:scaleX(1);}
+        }
+      }
+      
+      svg{
+        position: absolute;
+        top: 32px;
+        right: 20px;
+        scale: 1.2;
+      }
+      ul{
+        height: 15em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 80px;
+      }
     }
   }
 `

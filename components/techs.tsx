@@ -80,6 +80,11 @@ const Wrapper = styled.div`
   overflow: hidden;
   width: 100%;
   max-width: 485px;
+  @media (max-width:812px) {
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: center;
+  }
   .tech{
     &.Javascript{background-color: #f7e018;}
     &.Typescript{background-color: #017acb;}

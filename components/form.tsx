@@ -26,7 +26,7 @@ export default function Form(){
 
 const Wrapper = styled.div`
   width: 90%;
-  max-width: 990px;
+  max-width: 1090px;
   margin: 20px auto;
   /* text-align: center; */
   background-color: #372c5f;
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
       flex-wrap: wrap;
       div{
         width: 100%;
-        max-width: 28em;
+       
         input{
         width: 100%;
       }

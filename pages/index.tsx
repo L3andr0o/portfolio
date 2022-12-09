@@ -88,7 +88,12 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    @media (max-width:812px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   h4{
       color: #fff;
@@ -111,6 +116,11 @@ const Wrapper = styled.div`
     max-width: 1090px;
     justify-content: space-between;
     align-items: left;
+    @media (max-width:812px) {
+      /* flex-direction: column; */
+      justify-content: space-evenly;
+      align-items: center;
+    }
   }
 `
 
