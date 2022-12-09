@@ -27,6 +27,22 @@ export default function Description(){
         create and even design web
         pages using front-end
         technologies
+        Extremely motivated to
+        constantly develop my skills
+        and grow professionally. I am
+        confident in my ability to
+        create and even design web
+        pages using front-end
+        technologies
+      </p>
+      <p>
+      Extremely motivated to
+        constantly develop my skills
+        and grow professionally. I am
+        confident in my ability to
+        create and even design web
+        pages using front-end
+        technologies
       </p>
     </Wrapper>
   )
@@ -35,6 +51,7 @@ export default function Description(){
 const Wrapper = styled.div`
   &.description{
     text-align: left;
+    max-width: 425px;
     h1{
     font-size: 2.7em;
     font-weight: 800;

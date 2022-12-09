@@ -33,7 +33,9 @@ const Wrapper = styled.div`
   color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  margin: 20px auto;
+  /* margin: 20px auto; */
+  margin: 10px 0;
+  max-width: 250px;
   .project-img{
     width: 100%;
   }

@@ -7,10 +7,14 @@ export default function Form(){
       <h2>Contact Me</h2>
       <form>
         <div className="top">
-          <label htmlFor="name">Your Name</label>
-          <input type="text" id="name" autoComplete="off"/>
-          <label htmlFor="emailAdress">Your Email Adress</label>
-          <input type="email" id="emailAdress" autoComplete="off" />
+          <div>
+            <label htmlFor="name">Your Name</label>
+            <input type="text" id="name" autoComplete="off"/>
+          </div>
+          <div>
+            <label htmlFor="emailAdress">Your Email Adress</label>
+            <input type="email" id="emailAdress" autoComplete="off" />
+          </div>
         </div>
         <label htmlFor="message">Message</label>
         <textarea name="message" id="message" cols={30} rows={3}></textarea>
@@ -22,6 +26,7 @@ export default function Form(){
 
 const Wrapper = styled.div`
   width: 90%;
+  max-width: 990px;
   margin: 20px auto;
   /* text-align: center; */
   background-color: #372c5f;
@@ -44,6 +49,18 @@ const Wrapper = styled.div`
   }
   form{
     margin-top: 10px;
+    .top{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      div{
+        width: 100%;
+        max-width: 28em;
+        input{
+        width: 100%;
+      }
+      }
+    }
     input,textarea{
       width: 100%;
       padding: 10px;

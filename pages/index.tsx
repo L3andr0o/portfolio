@@ -37,11 +37,11 @@ export default function Home() {
         <Description />
         <Techs />
       </div>
+      <h4>
+        <Image src={CodeLogo} alt={'code'} width={25} height={25}/>
+        My Projects
+      </h4>
       <div className="projects">
-        <h1>
-          <Image src={CodeLogo} alt={'code'} width={25} height={25}/>
-          My Projects
-        </h1>
         <ProjectCard 
           img={TasksManager} 
           name='Task Manager' 
@@ -82,19 +82,35 @@ const Wrapper = styled.div`
   height: 100%;
   .info{
     width: 90%;
+    /* max-width: 285px; */
+    max-width: 1090px;
     margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-  .projects{
-    width: 90%;
-    margin: 20px auto;
-    text-align: center;
-    h1{
+  h4{
       color: #fff;
       font-weight: 500;
+      text-align: center;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       img{
         margin-right: 5px;
       }
     }
+  .projects{
+    width: 90%;
+    margin: 20px auto;
+    /* text-align: left; */
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1090px;
+    justify-content: space-between;
+    align-items: left;
   }
 `
 
