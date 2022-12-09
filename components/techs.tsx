@@ -79,11 +79,12 @@ const Wrapper = styled.div`
   margin-top: 20px;
   overflow: hidden;
   width: 100%;
-  max-width: 485px;
+  max-width: 425px;
   @media (max-width:812px) {
       /* flex-direction: column; */
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
+      margin: 0 auto;
   }
   .tech{
     &.Javascript{background-color: #f7e018;}
