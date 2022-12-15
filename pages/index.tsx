@@ -84,7 +84,8 @@ const Wrapper = styled.div`
     width: 90%;
     /* max-width: 285px; */
     max-width: 1090px;
-    margin: 20px auto;
+    margin: 40px auto;
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -110,6 +111,7 @@ const Wrapper = styled.div`
   .projects{
     width: 90%;
     margin: 20px auto;
+    margin-bottom: 120px;
     /* text-align: left; */
     display: flex;
     flex-wrap: wrap;

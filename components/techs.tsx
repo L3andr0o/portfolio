@@ -13,6 +13,7 @@ import Firebase from '../assets/Firebase.png';
 import Analytics from '../assets/Analytics.png';
 import Redux from '../assets/Redux.png';
 import Jest from '../assets/Jest.png';
+import Git from '../assets/Git.png';
 import Image from 'next/image'
 import styled from 'styled-components';
 
@@ -64,6 +65,9 @@ export default function Techs(){
       <div className="Jest tech">
         <Image src={Jest} alt='Jest' title='Jest' height={80} width={80}/>
       </div>
+      <div className="Git tech">
+        <Image src={Git} alt='Git' title='Git' height={80} width={80}/>
+      </div>
     </Wrapper>
   )
 }
@@ -79,10 +83,10 @@ const Wrapper = styled.div`
   margin-top: 20px;
   overflow: hidden;
   width: 100%;
-  max-width: 425px;
+  max-width: 475px;
   @media (max-width:812px) {
       /* flex-direction: column; */
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       margin: 0 auto;
   }
@@ -90,8 +94,8 @@ const Wrapper = styled.div`
     &.Javascript{background-color: #f7e018;}
     &.Typescript{background-color: #017acb;}
     &.Jest{background-color:#bb7c7c;}
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 6em;
     text-align: center;
     margin: 10px ;
     border-radius: 5px;

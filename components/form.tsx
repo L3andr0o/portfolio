@@ -4,8 +4,10 @@ import styled from "styled-components"
 export default function Form(){
   return(
     <Wrapper>
-      <h2>Contact Me</h2>
+      <div className="picture">
+      </div>
       <form>
+      <h2>Contact Me</h2>
         <div className="top">
           <div>
             <label htmlFor="name">Your Name</label>
@@ -25,64 +27,128 @@ export default function Form(){
 }
 
 const Wrapper = styled.div`
-  width: 90%;
-  max-width: 1090px;
-  margin: 20px auto;
-  /* text-align: center; */
-  background-color: #372c5f;
-  border-radius: 8px;
-  color: #fff;
-  padding: 10px 20px;
-  label{
-    display: block;
-    font-size: 14px;
-    margin: 3px 0 ;
-    width: fit-content;
+  @media (max-width:720px) {
+    width: 90%;
+    max-width: 1090px;
+    margin: 20px auto;
+    background-color: #372c5f;
+    border-radius: 8px;
+    color: #fff;
+    position: relative;
+    padding: 10px 20px;
+    label{
+      display: block;
+      font-size: 14px;
+      margin: 3px 0 ;
+      width: fit-content;
+    }
+    .picture{display:none;}
+    form{
+      margin-top: 10px;
+      h2{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        border-bottom: 2px solid #a0999933;
+        padding: 5px;
+      }
+      .top{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        div{
+        width: 100%;
+          input{
+            width: 100%;
+          }
+        }
+      }
+      input,textarea{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        resize: none;
+        background-color: #171933;
+        transition: all .3s ease;
+        color: #fff;
+        &:focus{
+        background-color: #0f1127;
+        }
+      }
+      button{
+        width: 100%;
+        padding: 10px;
+        background-color: #0c0830;
+        color: #fff;
+        border: none;
+        outline: none;
+        margin-top: 5px;
+      }
+    }
   }
-  h2{
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    border-bottom: 2px solid #a0999933;
-    padding: 5px;
-
-  }
-  form{
-    margin-top: 10px;
-    .top{
+  @media (min-width: 720px) {
+    display: flex;
+    width: 90%;
+    max-width: 1090px;
+    margin: 20px auto;
+    background-color: #372c5f;
+    border-radius: 8px;
+    height: 25em;
+    align-items: center;
+    justify-content: space-between;
+    label{
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .picture{
+      height: 100%;
+      width: 50%;
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      div{
-        width: 100%;
-       
-        input{
-        width: 100%;
-      }
-      }
-    }
-    input,textarea{
-      width: 100%;
-      padding: 10px;
-      border: none;
-      outline: none;
-      border-radius: 4px;
-      resize: none;
-      background-color: #171933;
-      transition: all .3s ease;
+      justify-content: center;
+      align-items: center;
       color: #fff;
-      &:focus{
-      background-color: #0f1127;
-      }
+      background-image: url(https://www.freecodecamp.org/news/content/images/2022/02/arnold-francisca-f77Bh3inUpE-unsplash.jpg);
     }
-    button{
-      width: 100%;
-      padding: 10px;
-      background-color: #0c0830;
+    form{
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
       color: #fff;
-      border: none;
-      outline: none;
-      margin-top: 5px;
+      h2{
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      input,textarea{
+        width: 100%;
+        padding: 10px 5px;
+        resize: none;
+        background-color: #0f1127;
+        border: none;
+        outline: none;
+        color: #fff;
+        transition: background-color .3s ease-in-out;
+        &:focus{
+          background-color: #171933;
+        }
+      }
+      button{
+        width: 100%;
+        padding: 10px;
+        background-color: #0c0830;
+        color: #fff;
+        border: none;
+        outline: none;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: background-color .3s ease;
+        &:hover{
+          background-color: #171933;
+        }
+      }
     }
   }
 `
