@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styled from "styled-components"
 import { GlobalStyles } from "../assets/globalStyles"
+import Link from "next/link";
 
 
 export default function Navbar(){
@@ -10,6 +11,7 @@ export default function Navbar(){
   return(
     <Wrapper>
       <GlobalStyles />
+      <div className="content">
       <div className={`left burger ${menuState}`}>
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" onClick={()=>setMenuState(false)}>
           <g fill="#828FA3" fillRule="evenodd">
@@ -18,10 +20,10 @@ export default function Navbar(){
           </g>
         </svg>
         <ul>
-          <li>Home</li>
-          <li>Skills</li>
-          <li>Projects</li>
+          <li><Link href='/'>Home</Link></li>
+          <li><Link href='/#projects'>Projects</Link></li>
           <li>Resume</li>
+          <li><Link href='/#contact'>Contact</Link></li>
         </ul>
       </div>
       
@@ -33,13 +35,14 @@ export default function Navbar(){
           <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/>
         </g>
       </svg>
+      </div>
      {menuState && <div className="bg" onClick={()=>setMenuState(false)}></div>}
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 5em;
   background-color: #18181b;
   padding: 0 5%;
@@ -48,7 +51,16 @@ const Wrapper = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid #3338;
   color: #fff;
+  /* position: sticky; */
   /* position: relative; */
+  .content{
+    max-width: 1090px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .bg{
     position: absolute;
     top: 0;

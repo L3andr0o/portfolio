@@ -22,7 +22,7 @@ import Analytics from '../assets/Analytics.png';
 import Workbox from '../assets/Workbox.svg';
 import Form from '../components/form'
 import Footer from '../components/footer'
-
+import Link from 'next/link'
 
 
 
@@ -41,7 +41,7 @@ export default function Home() {
         <Image src={CodeLogo} alt={'code'} width={25} height={25}/>
         My Projects
       </h4>
-      <div className="projects">
+      <div className="projects" id='projects'>
         <ProjectCard 
           img={TasksManager} 
           name='Task Manager' 
@@ -63,13 +63,15 @@ export default function Home() {
           description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
           techs={[ReactJs,Javascript,Analytics,Workbox]}
         />
-        <ProjectCard 
-          img={SpaceTourismWeb} 
-          name='Space Tourism Web' 
-          subt='This is a space tourism web' 
-          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
-          techs={[Gatsby,Typescript,Analytics]}
-        />
+        <Link href='https://space-tourism-web-gatsby.netlify.app/' target='_blank'>
+          <ProjectCard 
+            img={SpaceTourismWeb} 
+            name='Space Tourism Web' 
+            subt='This is a space tourism web' 
+            description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+            techs={[Gatsby,Typescript,Analytics]}
+          />
+        </Link>
       </div>
       <Form />
       <Footer />

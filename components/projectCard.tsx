@@ -36,6 +36,11 @@ const Wrapper = styled.div`
   /* margin: 20px auto; */
   margin: 10px 0;
   max-width: 250px;
+  cursor: pointer;
+  transition: scale .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover{
+    scale: 1.10;
+  }
   .project-img{
     width: 100%;
   }

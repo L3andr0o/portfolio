@@ -1,26 +1,38 @@
-
+import emailjs from '@emailjs/browser';
 import styled from "styled-components"
 
 export default function Form(){
+
+  const sendEmail = (e:any)=>{
+    e.preventDefault();
+    emailjs.sendForm('service_zdn00ck','template_hax3yqu',e.target,'Jfyi76m84VM3xScUw')
+    .then((result)=>{
+      console.log(result.text)
+    },(error)=>{
+      console.log(error.text)
+    });
+    e.target.reset();
+  }
+
   return(
-    <Wrapper>
+    <Wrapper id='contact'>
       <div className="picture">
       </div>
-      <form>
+      <form onSubmit={e=>sendEmail(e)}>
       <h2>Contact Me</h2>
         <div className="top">
           <div>
             <label htmlFor="name">Your Name</label>
-            <input type="text" id="name" autoComplete="off"/>
+            <input type="text" id="name" autoComplete="off" name='from_name'/>
           </div>
           <div>
             <label htmlFor="emailAdress">Your Email Adress</label>
-            <input type="email" id="emailAdress" autoComplete="off" />
+            <input type="email" id="emailAdress" autoComplete="off" name='email_id' />
           </div>
         </div>
         <label htmlFor="message">Message</label>
-        <textarea name="message" id="message" cols={30} rows={3}></textarea>
-        <button>SEND MESSAGE</button>
+        <textarea name="message" id="message" cols={30} rows={3} dirName='message'></textarea>
+        <button type='submit'>SEND MESSAGE</button>
       </form>
     </Wrapper>
   )

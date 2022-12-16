@@ -1,24 +1,25 @@
 import styled from "styled-components";
 import { BsWhatsapp,BsTelegram } from 'react-icons/bs';
 import { AiFillLinkedin,AiFillGithub} from 'react-icons/ai';
+import Link from "next/link";
 
 export default function Footer(){
   return(
     <Wrapper>
       <div className="content">
         <div className="socials">
-          <a href="https://wa.me/584245069396" target='_blank'>
+          <Link href="https://wa.me/584245069396" target='_blank'>
             <BsWhatsapp />
-          </a>
-          <a href="https://www.linkedin.com/in/leandro-p%C3%A9rez-barahona-743a37211/" target='_blank'>
+          </Link>
+          <Link href="https://www.linkedin.com/in/leandro-p%C3%A9rez-barahona-743a37211/" target='_blank'>
             <AiFillLinkedin />
-          </a>
-          <a href="https://github.com/L3andr0o" target='_blank'>
+          </Link>
+          <Link href="https://github.com/L3andr0o" target='_blank'>
             <AiFillGithub />
-          </a>
-          <a href="t.me/LeandroPerezDeveloper">
-            <BsTelegram className="xd"/>
-          </a>
+          </Link>
+          <Link href="https://t.me/LeandroPerezDeveloper" target='_blank'>
+            <BsTelegram className="telegram"/>
+          </Link>
         </div>
         <span>Leandro Perez, Front-end Developer</span>
       </div>
@@ -52,6 +53,11 @@ const Wrapper = styled.div`
     justify-content: space-between;
     svg{
       color: #Fff;
+    }
+    .telegram{
+      &:hover{
+        color: #7375f1;
+      }
     }
   }
   }
