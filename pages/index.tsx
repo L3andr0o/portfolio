@@ -23,11 +23,23 @@ import Workbox from '../assets/Workbox.svg';
 import Form from '../components/form'
 import Footer from '../components/footer'
 import Link from 'next/link'
-
+import { useRouter } from 'next/router'
+import en from '../intl/en'
+import es from '../intl/es'
 
 
 
 export default function Home() {
+  const router = useRouter();
+  const {locale} = router
+  const t = locale === 'en' ? en : es;
+  const changeLanguage = (e:any)=>{
+    e.preventDefault();
+    const locale = 'en';
+    router.push('/','/',{locale})
+  }
+
+
   return (
     <Wrapper>
       <GlobalStyles />
@@ -73,6 +85,9 @@ export default function Home() {
           />
         </Link>
       </div>
+      <button onClick={e=>changeLanguage(e)}>EN</button>
+      <h1>{t.test}</h1>
+
       <Form />
       <Footer />
     </Wrapper>
