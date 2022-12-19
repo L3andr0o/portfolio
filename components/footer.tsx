@@ -29,7 +29,8 @@ export default function Footer(){
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 4em;
+  height: fit-content;
+  min-height: 4em;
   display: flex;
   margin-top: 150px;
   flex-direction: column;

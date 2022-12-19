@@ -85,10 +85,11 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 475px;
   @media (max-width:812px) {
-      /* flex-direction: column; */
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
   }
   .tech{
     &.Javascript{background-color: #f7e018;}

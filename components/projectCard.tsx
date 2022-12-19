@@ -12,7 +12,7 @@ interface Props{
 export default function ProjectCard({img,name,subt,description,techs} : Props){
   return(
     <Wrapper>
-      <Image src={img} alt='project' width={200} height={180} className='project-img'/>
+      <Image src={img} alt='project' width={200} height={200} className='project-img'/>
       <div className="project-info">
         <h2>{name}</h2>
         <span>{subt}</span>
@@ -34,12 +34,16 @@ const Wrapper = styled.div`
   border-radius: 8px;
   overflow: hidden;
   /* margin: 20px auto; */
-  margin: 10px 0;
-  max-width: 250px;
+  margin: 15px 0;
+  max-width: 280px;
   cursor: pointer;
   transition: scale .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  @media (max-width:425px) {
+    width: 100%;
+    max-width: 410px;
+  }
   &:hover{
-    scale: 1.10;
+    scale: 1.05;
   }
   .project-img{
     width: 100%;
@@ -66,6 +70,7 @@ const Wrapper = styled.div`
     justify-content: right;
     background-color: #303131;
     padding: 6px;
+    margin-top: 20px;
     img{
       margin-right: 8px;
     }

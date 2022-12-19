@@ -110,6 +110,7 @@ const Wrapper = styled.div`
     height: 25em;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
     label{
       display: block;
       font-size: 14px;
@@ -122,6 +123,7 @@ const Wrapper = styled.div`
       justify-content: center;
       align-items: center;
       color: #fff;
+      background-size: cover;
       background-image: url(https://www.freecodecamp.org/news/content/images/2022/02/arnold-francisca-f77Bh3inUpE-unsplash.jpg);
     }
     form{
