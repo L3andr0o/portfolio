@@ -3,12 +3,11 @@ import styled from 'styled-components'
 
 
 export default function Description(){
-  const techs = ['Javascript','Typescript','React','Vue']
+  const techs = ['Javascript developer','Typescript developer','React developer','Vue developer']
   return(
     <Wrapper className="description">
       <h1>Leandro Perez</h1>
       <span>
-      Devoloper in 
         <Typed
         strings={techs}
         typeSpeed={50}

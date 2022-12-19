@@ -1,5 +1,8 @@
 import { AppProps } from "next/app";
+import LangProvider from "../context/langContext";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <LangProvider>
+    <Component {...pageProps} />
+  </LangProvider>
 }

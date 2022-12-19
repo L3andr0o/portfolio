@@ -23,22 +23,12 @@ import Workbox from '../assets/Workbox.svg';
 import Form from '../components/form'
 import Footer from '../components/footer'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import en from '../intl/en'
-import es from '../intl/es'
-
+import { useLang } from '../context/langContext'
 
 
 export default function Home() {
-  const router = useRouter();
-  const {locale} = router
-  const t = locale === 'en' ? en : es;
-  const changeLanguage = (e:any)=>{
-    e.preventDefault();
-    const locale = 'en';
-    router.push('/','/',{locale})
-  }
 
+  const {language} = useLang()
 
   return (
     <Wrapper>
@@ -51,7 +41,7 @@ export default function Home() {
       </div>
       <h4>
         <Image src={CodeLogo} alt={'code'} width={25} height={25}/>
-        My Projects
+        {language.projectsHeader}
       </h4>
       <div className="projects" id='projects'>
         <ProjectCard 
@@ -85,9 +75,6 @@ export default function Home() {
           />
         </Link>
       </div>
-      <button onClick={e=>changeLanguage(e)}>EN</button>
-      <h1>{t.test}</h1>
-
       <Form />
       <Footer />
     </Wrapper>

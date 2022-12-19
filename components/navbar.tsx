@@ -2,11 +2,13 @@ import { useState } from "react"
 import styled from "styled-components"
 import { GlobalStyles } from "../assets/globalStyles"
 import Link from "next/link";
+import { useLang } from '../context/langContext'
 
 
 export default function Navbar(){
 
   const [menuState,setMenuState] = useState<boolean | null>(null);
+  const {changeLanguage,language} = useLang()
 
   return(
     <Wrapper>
@@ -20,15 +22,15 @@ export default function Navbar(){
           </g>
         </svg>
         <ul>
-          <li><Link href='/'>Home</Link></li>
-          <li><Link href='/#projects'>Projects</Link></li>
-          <li>Resume</li>
-          <li><Link href='/#contact'>Contact</Link></li>
+          <li><Link href='/'>{language.navbarLink1}</Link></li>
+          <li><Link href='/#projects'>{language.navbarLink2}</Link></li>
+          <li>{language.navbarLink3}</li>
+          <li><Link href='/#contact'>{language.navbarLink4}</Link></li>
         </ul>
       </div>
       
-      <div className="rigth">
-        <span>EN</span>
+      <div className="rigth" onClick={()=>changeLanguage()}>
+        <span>{language.lang}</span>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" onClick={()=>setMenuState(true)}>
         <g fill="#7e8192" fillRule="evenodd">

@@ -1,5 +1,6 @@
 import emailjs from '@emailjs/browser';
 import styled from "styled-components"
+import { useLang } from '../context/langContext';
 
 export default function Form(){
 
@@ -13,26 +14,27 @@ export default function Form(){
     });
     e.target.reset();
   }
+  const {language} = useLang();
 
   return(
     <Wrapper id='contact'>
       <div className="picture">
       </div>
       <form onSubmit={e=>sendEmail(e)}>
-      <h2>Contact Me</h2>
+      <h2>{language.formHeader}</h2>
         <div className="top">
           <div>
-            <label htmlFor="name">Your Name</label>
+            <label htmlFor="name">{language.formInp1}</label>
             <input type="text" id="name" autoComplete="off" name='from_name'/>
           </div>
           <div>
-            <label htmlFor="emailAdress">Your Email Adress</label>
+            <label htmlFor="emailAdress">{language.formInp2}</label>
             <input type="email" id="emailAdress" autoComplete="off" name='email_id' />
           </div>
         </div>
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">{language.formInp3}</label>
         <textarea name="message" id="message" cols={30} rows={3} dirName='message'></textarea>
-        <button type='submit'>SEND MESSAGE</button>
+        <button type='submit'>{language.formBtn}</button>
       </form>
     </Wrapper>
   )
