@@ -22,15 +22,15 @@ export default function Navbar(){
           </g>
         </svg>
         <ul>
-          <li><Link href='/'>{language.navbarLink1}</Link></li>
-          <li><Link href='/#projects'>{language.navbarLink2}</Link></li>
+          <li><a href='/'>{language.navbarLink1}</a></li>
+          <li><a href='/#projects'>{language.navbarLink2}</a></li>
           <li>{language.navbarLink3}</li>
-          <li><Link href='/#contact'>{language.navbarLink4}</Link></li>
+          <li><a href='/#contact'>{language.navbarLink4}</a></li>
         </ul>
       </div>
       
       <div className="rigth" onClick={()=>changeLanguage()}>
-        <span>{language.lang}</span>
+        <span className='langSw'>{language.lang}</span>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" onClick={()=>setMenuState(true)}>
         <g fill="#7e8192" fillRule="evenodd">
@@ -75,6 +75,12 @@ const Wrapper = styled.div`
     scale: .8;
     @media (min-width: 720px) {
       display: none;
+    }
+  }
+  .langSw{
+    cursor: pointer;
+    &:hover{
+      color: #ccc;
     }
   }
   .left{

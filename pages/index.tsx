@@ -44,28 +44,34 @@ export default function Home() {
         {language.projectsHeader}
       </h4>
       <div className="projects" id='projects'>
-        <ProjectCard 
-          img={TasksManager} 
-          name='Task Manager' 
-          subt='This is a task manager' 
-          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
-          techs={[ReactJs,Typescript,Firebase]}
-        />
-        <ProjectCard 
-          img={CountriesApp} 
-          name='Countries App' 
-          subt='This is a countries app' 
-          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
-          techs={[ReactJs,Typescript,Analytics]}
-        />
-        <ProjectCard 
-          img={RockPaperScissors} 
-          name='Rock Paper Scissors Pwa App' 
-          subt='This is a rock paper scissors app' 
-          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
-          techs={[ReactJs,Javascript,Analytics,Workbox]}
-        />
-        <Link href='https://space-tourism-web-gatsby.netlify.app/' target='_blank'>
+        <a href='https://tasks-manager-kanban.netlify.app/' target='_blank'>
+          <ProjectCard 
+            img={TasksManager} 
+            name='Task Manager' 
+            subt='This is a task manager' 
+            description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+            techs={[ReactJs,Typescript,Firebase]}
+          />
+        </a>
+        <a href='https://countries-api-site.netlify.app/' target='_blank'>
+          <ProjectCard 
+            img={CountriesApp} 
+            name='Countries App' 
+            subt='This is a countries app' 
+            description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+            techs={[ReactJs,Typescript,Analytics]}
+          />
+        </a>
+        <a href='https://rock-papers-scissors-pwa.netlify.app/' target='_blank'>
+          <ProjectCard 
+            img={RockPaperScissors} 
+            name='Rock Paper Scissors Pwa App' 
+            subt='This is a rock paper scissors app' 
+            description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+            techs={[ReactJs,Javascript,Analytics,Workbox]}
+          />
+        </a>
+        <a href='https://space-tourism-web-gatsby.netlify.app/' target='_blank'>
           <ProjectCard 
             img={SpaceTourismWeb} 
             name='Space Tourism Web' 
@@ -73,7 +79,7 @@ export default function Home() {
             description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
             techs={[Gatsby,Typescript,Analytics]}
           />
-        </Link>
+        </a>
       </div>
       <Form />
       <Footer />
@@ -87,7 +93,7 @@ const Wrapper = styled.div`
   .info{
     width: 90%;
     /* max-width: 285px; */
-    max-width: 1090px;
+    max-width: 1120px;
     margin: 40px auto;
     margin-bottom: 100px;
     display: flex;
@@ -119,7 +125,7 @@ const Wrapper = styled.div`
     /* text-align: left; */
     display: flex;
     flex-wrap: wrap;
-    max-width: 1090px;
+    max-width: 1180px;
     justify-content: space-between;
     align-items: left;
     @media (max-width:812px) {
