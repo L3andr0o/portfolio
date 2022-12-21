@@ -1,15 +1,22 @@
 import styled from "styled-components";
 import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/router";
 
 interface Props{
   img : StaticImageData,
   name : string,
   subt : string,
   description : string,
-  techs : StaticImageData[]
+  techs : StaticImageData[],
+  repo : string,
+  demo : string
 }
 
-export default function ProjectCard({img,name,subt,description,techs} : Props){
+export default function ProjectCard({img,name,subt,description,techs,repo,demo} : Props){
+
+  const router = useRouter();
+  const goTo = (href:string)=>window.open(href,'_blank')
+
   return(
     <Wrapper>
       <Image src={img} alt='project' width={200} height={200} className='project-img'/>
@@ -23,6 +30,10 @@ export default function ProjectCard({img,name,subt,description,techs} : Props){
           <Image src={tech} alt='tech' width={20} height={20}/>
         ))}
       </div>
+      <div className="btns">
+        <button onClick={()=>goTo(repo)}>Code</button>
+        <button onClick={()=>goTo(demo)}>Demo</button>
+      </div>
     </Wrapper>
   )
 }
@@ -30,20 +41,21 @@ export default function ProjectCard({img,name,subt,description,techs} : Props){
 const Wrapper = styled.div`
   width: 100%;
   background-color: #0007;
+  position: relative;
   color: #fff;
   border-radius: 8px;
   overflow: hidden;
   /* margin: 20px auto; */
   margin: 15px 0;
   max-width: 280px;
-  cursor: pointer;
-  transition: scale .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* cursor: pointer; */
+  transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
   @media (max-width:425px) {
     width: 100%;
     max-width: 410px;
   }
-  &:hover{
-    scale: 1.05;
+  &:hover > .btns{
+    bottom: 0;
   }
   .project-img{
     width: 100%;
@@ -73,6 +85,37 @@ const Wrapper = styled.div`
     margin-top: 20px;
     img{
       margin-right: 8px;
+    }
+  }
+  .btns{
+    position: absolute;
+    bottom: -100%;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    cursor: default;
+    button{
+      width: 80%;
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      font-weight: 600;
+      background-color: #3e4a64;
+      color: #fff;
+      cursor: pointer;
+      a{
+        width: 100%;
+        height: 100%;
+        background-color: #425;
+      }
     }
   }
 `

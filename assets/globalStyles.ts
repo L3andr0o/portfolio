@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     font-family: 'Lato';
     list-style: none;
+    scroll-behavior: smooth;
     &:visited{
       color: #fff;
     }
@@ -16,5 +17,8 @@ export const GlobalStyles = createGlobalStyle`
     /* overflow: hidden; */
     background-color: #18181b;
     overflow-X: hidden;
+  }
+  a{
+    color: #fff;
   }
 `

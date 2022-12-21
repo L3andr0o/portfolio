@@ -9,13 +9,13 @@ export default function Footer(){
       <div className="content">
         <div className="socials">
           <Link href="https://wa.me/584245069396" target='_blank'>
-            <BsWhatsapp />
+            <BsWhatsapp className="whatsapp"/>
           </Link>
           <Link href="https://www.linkedin.com/in/leandro-p%C3%A9rez-barahona-743a37211/" target='_blank'>
-            <AiFillLinkedin />
+            <AiFillLinkedin className="linkedin" />
           </Link>
-          <Link href="https://github.com/L3andr0o" target='_blank'>
-            <AiFillGithub />
+          <Link href="https://github.com/leandroperez19" target='_blank'>
+            <AiFillGithub className="github" />
           </Link>
           <Link href="https://t.me/LeandroPerezDeveloper" target='_blank'>
             <BsTelegram className="telegram"/>
@@ -55,9 +55,24 @@ const Wrapper = styled.div`
     svg{
       color: #Fff;
     }
+    .linkedin{
+      &:hover{
+        color: #0977c0;
+      }
+    }
+    .whatsapp{
+      &:hover{
+        color: #5ceb4f;
+      }
+    }
     .telegram{
       &:hover{
-        color: #7375f1;
+        color: #4faceb;
+      }
+    }
+    .github{
+      &:hover{
+        color: #727272;
       }
     }
   }

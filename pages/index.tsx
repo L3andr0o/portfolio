@@ -44,42 +44,42 @@ export default function Home() {
         {language.projectsHeader}
       </h4>
       <div className="projects" id='projects'>
-        <a href='https://tasks-manager-kanban.netlify.app/' target='_blank'>
-          <ProjectCard 
-            img={TasksManager} 
-            name='Task Manager' 
-            subt='This is a task manager' 
-            description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
-            techs={[ReactJs,Typescript,Firebase]}
-          />
-        </a>
-        <a href='https://countries-api-site.netlify.app/' target='_blank'>
-          <ProjectCard 
-            img={CountriesApp} 
-            name='Countries App' 
-            subt='This is a countries app' 
-            description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
-            techs={[ReactJs,Typescript,Analytics]}
-          />
-        </a>
-        <a href='https://rock-papers-scissors-pwa.netlify.app/' target='_blank'>
-          <ProjectCard 
-            img={RockPaperScissors} 
-            name='Rock Paper Scissors Pwa App' 
-            subt='This is a rock paper scissors app' 
-            description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
-            techs={[ReactJs,Javascript,Analytics,Workbox]}
-          />
-        </a>
-        <a href='https://space-tourism-web-gatsby.netlify.app/' target='_blank'>
-          <ProjectCard 
-            img={SpaceTourismWeb} 
-            name='Space Tourism Web' 
-            subt='This is a space tourism web' 
-            description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
-            techs={[Gatsby,Typescript,Analytics]}
-          />
-        </a>
+        <ProjectCard 
+          img={TasksManager} 
+          name='Task Manager' 
+          subt='This is a task manager' 
+          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+          techs={[ReactJs,Typescript,Firebase]}
+          repo='https://github.com/leandroperez19/tasks-manager'
+          demo='https://tasks-manager-kanban.netlify.app/'
+        />      
+        <ProjectCard 
+          img={CountriesApp} 
+          name='Countries App' 
+          subt='This is a countries app' 
+          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+          techs={[ReactJs,Typescript,Analytics]}
+          repo='https://github.com/leandroperez19/countries-typescript'
+          demo='https://countries-api-site.netlify.app'
+        />  
+        <ProjectCard 
+          img={RockPaperScissors} 
+          name='Rock Paper Scissors Pwa App' 
+          subt='This is a rock paper scissors app' 
+          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+          techs={[ReactJs,Javascript,Analytics,Workbox]}
+          repo='https://github.com/leandroperez19/rock-paper-scissors-pwa'
+          demo='https://rock-papers-scissors-pwa.netlify.app'
+        />
+        <ProjectCard 
+          img={SpaceTourismWeb} 
+          name='Space Tourism Web' 
+          subt='This is a space tourism web' 
+          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+          techs={[Gatsby,Typescript,Analytics]}
+          repo='https://github.com/leandroperez19/space-tourism-web'
+          demo='https://space-tourism-web-gatsby.netlify.app/'
+        />
       </div>
       <Form />
       <Footer />

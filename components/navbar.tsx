@@ -55,10 +55,15 @@ const Wrapper = styled.div`
   color: #fff;
   /* position: sticky; */
   /* position: relative; */
+  @media (min-width: 720px) {
+    position: relative;
+  }
   .content{
     max-width: 1090px;
     width: 100%;
     margin: 0 auto;
+    height: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,10 +92,37 @@ const Wrapper = styled.div`
     @media (min-width: 720px) {
       width: 40%;
       max-width: 20em;
+      height: 100%;
       ul{
         display: flex;
         justify-content: space-between;
         width: 100%;
+        height: 100%;
+        align-items: center;
+        li{
+          position: relative;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          &:hover:after{
+            width: 100%;
+          }
+          &:after{
+            content: '';
+            width: 0%;
+            height: 1px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            background-color: #fff;
+            transition: width .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+          }
+          a{
+            height: 100%;
+            display: flex;
+            align-items: center;
+          }
+        }
       }
     }
   }
