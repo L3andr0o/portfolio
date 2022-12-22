@@ -94,7 +94,7 @@ const Wrapper = styled.div`
     width: 90%;
     /* max-width: 285px; */
     max-width: 1120px;
-    margin: 40px auto;
+    margin: 80px auto;
     margin-bottom: 100px;
     display: flex;
     align-items: center;

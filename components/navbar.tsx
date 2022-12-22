@@ -53,11 +53,9 @@ const Wrapper = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid #3338;
   color: #fff;
-  /* position: sticky; */
-  /* position: relative; */
-  @media (min-width: 720px) {
-    position: relative;
-  }
+  position: fixed;
+  top: 0;
+  z-index: 200;
   .content{
     max-width: 1090px;
     width: 100%;

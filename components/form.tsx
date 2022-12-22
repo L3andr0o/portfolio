@@ -6,13 +6,19 @@ export default function Form(){
 
   const sendEmail = (e:any)=>{
     e.preventDefault();
-    emailjs.sendForm('service_zdn00ck','template_hax3yqu',e.target,'Jfyi76m84VM3xScUw')
-    .then((result)=>{
-      console.log(result.text)
-    },(error)=>{
-      console.log(error.text)
-    });
-    e.target.reset();
+    const name = e.target.name.value.length;
+    const email = e.target.email_id.value.length;
+    const message = e.target.message.value.length;
+    if(name > 0 && email > 0 && message > 0){
+      emailjs.sendForm('service_zdn00ck','template_hax3yqu',e.target,'Jfyi76m84VM3xScUw')
+      .then((result)=>{
+        console.log(result.text)
+      },(error)=>{
+        console.log(error.text)
+      });
+      e.target.reset();
+      return
+    }alert(`Can't be empty fields`)
   }
   const {language} = useLang();
 
