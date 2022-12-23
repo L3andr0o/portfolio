@@ -55,7 +55,7 @@ export default function Home() {
         />      
         <ProjectCard 
           img={CountriesApp} 
-          name='Countries App' 
+          name='Countries Web' 
           subt={language.countriesAppSubt}
           description={language.countriesAppDesc}
           techs={[ReactJs,Typescript,Analytics]}
