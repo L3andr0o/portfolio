@@ -4,6 +4,8 @@ export default {
     navbarLink2: 'Projects',
     navbarLink3: 'Resume',
     navbarLink4: 'Contact',
+    presentation: "Hi, i'm Leandro, a front-end developer!.",
+    presentation2: "I'm a guy from Venezuela, I've been programming using Front-end technologies like React, Redux, Next and Vue for almost a year, writing code is something I really love to do, and it keeps me learning new things every day.",
     projectsHeader: 'My Projects',
     taskManagerSubt: 'Create, read and delete tasks!',
     taskManagerDesc: 'This is a web app where you can manage tasks, you can create, edit and eliminate a task by using a form. It was built using React alongside Typescript, and Firebase for the REST API where the tasks are keep.',

@@ -24,8 +24,17 @@ export default function Navbar(){
         <ul>
           <li><a href='/'>{language.navbarLink1}</a></li>
           <li><a href='/#projects'>{language.navbarLink2}</a></li>
-          <li>{language.navbarLink3}</li>
           <li><a href='/#contact'>{language.navbarLink4}</a></li>
+          <li>
+            <a 
+            target='_blank'
+            href={
+              language.lang === 'EN' ? 
+              'https://drive.google.com/file/d/18XqcDpdAVF0GD7sGpdwQBb3gLk0KMSH-/view?usp=share_link' : 
+              'https://drive.google.com/file/d/1Qm8JFSpm3x-jXtyV6Xh6FveH5ikb-lLW/view?usp=share_link'}>
+                {language.navbarLink3}
+            </a>
+          </li>
         </ul>
       </div>
       
@@ -82,6 +91,7 @@ const Wrapper = styled.div`
   }
   .langSw{
     cursor: pointer;
+    transition: color .3s ease-in-out;
     &:hover{
       color: #ccc;
     }

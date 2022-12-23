@@ -113,10 +113,11 @@ const Wrapper = styled.div`
       background-color: #3e4a64;
       color: #fff;
       cursor: pointer;
-      a{
-        width: 100%;
-        height: 100%;
-        background-color: #425;
+      overflow: hidden;
+      position: relative;
+      transition: background-color .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      &:hover{
+        background-color: #273452;
       }
     }
   }

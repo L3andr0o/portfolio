@@ -1,26 +1,25 @@
 import styled from "styled-components";
 import { BsWhatsapp,BsTelegram } from 'react-icons/bs';
 import { AiFillLinkedin,AiFillGithub} from 'react-icons/ai';
-import Link from "next/link";
 
 export default function Footer(){
   return(
     <Wrapper>
       <div className="content">
-        <div className="socials">
-          <Link href="https://wa.me/584245069396" target='_blank'>
+      <div className="socials">
+          <a href="https://wa.me/584245069396" target='_blank'>
             <BsWhatsapp className="whatsapp"/>
-          </Link>
-          <Link href="https://www.linkedin.com/in/leandro-perez-743a37211/" target='_blank'>
+          </a>
+          <a href="https://www.linkedin.com/in/leandro-perez-743a37211/" target='_blank'>
             <AiFillLinkedin className="linkedin" />
-          </Link>
-          <Link href="https://github.com/leandroperez19" target='_blank'>
+          </a>
+          <a href="https://github.com/leandroperez19" target='_blank'>
             <AiFillGithub className="github" />
-          </Link>
-          <Link href="https://t.me/LeandroPerezDeveloper" target='_blank'>
+          </a>
+          <a href="https://t.me/LeandroPerezDeveloper" target='_blank'>
             <BsTelegram className="telegram"/>
-          </Link>
-        </div>
+          </a>
+      </div>
         <span>Leandro Perez, Front-end Developer</span>
       </div>
     </Wrapper>
