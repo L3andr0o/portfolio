@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image, { StaticImageData } from "next/image";
-import { useRouter } from "next/router";
+import { useLang } from "../context/langContext";
 
 interface Props{
   img : StaticImageData,
@@ -14,8 +14,8 @@ interface Props{
 
 export default function ProjectCard({img,name,subt,description,techs,repo,demo} : Props){
 
-  const router = useRouter();
-  const goTo = (href:string)=>window.open(href,'_blank')
+  const goTo = (href:string)=>window.open(href,'_blank');
+  const {language} = useLang();
 
   return(
     <Wrapper>
@@ -31,7 +31,7 @@ export default function ProjectCard({img,name,subt,description,techs,repo,demo} 
         ))}
       </div>
       <div className="btns">
-        <button onClick={()=>goTo(repo)}>Code</button>
+        <button onClick={()=>goTo(repo)}>{language.cardsCodeBtn}</button>
         <button onClick={()=>goTo(demo)}>Demo</button>
       </div>
     </Wrapper>
@@ -45,10 +45,8 @@ const Wrapper = styled.div`
   color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  /* margin: 20px auto; */
   margin: 15px 0;
   max-width: 280px;
-  /* cursor: pointer; */
   transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
   @media (max-width:425px) {
     width: 100%;
@@ -75,6 +73,10 @@ const Wrapper = styled.div`
       margin-top: 10px;
       font-size: 14px;
       color: #99a4ac;
+      max-height: 85px;
+      min-height: 85px;
+      max-width: 100%;
+      text-overflow: clip;
     }
   }
   .techs-used{

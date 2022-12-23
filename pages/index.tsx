@@ -47,8 +47,8 @@ export default function Home() {
         <ProjectCard 
           img={TasksManager} 
           name='Task Manager' 
-          subt='This is a task manager' 
-          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+          subt={language.taskManagerSubt} 
+          description={language.taskManagerDesc}
           techs={[ReactJs,Typescript,Firebase]}
           repo='https://github.com/leandroperez19/tasks-manager'
           demo='https://tasks-manager-kanban.netlify.app/'
@@ -56,17 +56,17 @@ export default function Home() {
         <ProjectCard 
           img={CountriesApp} 
           name='Countries App' 
-          subt='This is a countries app' 
-          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+          subt={language.countriesAppSubt}
+          description={language.countriesAppDesc}
           techs={[ReactJs,Typescript,Analytics]}
           repo='https://github.com/leandroperez19/countries-typescript'
           demo='https://countries-api-site.netlify.app'
         />  
         <ProjectCard 
           img={RockPaperScissors} 
-          name='Rock Paper Scissors Pwa App' 
-          subt='This is a rock paper scissors app' 
-          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+          name='Rock Paper Scissors Pwa' 
+          subt={language.rockPaperScissorsSubt}
+          description={language.rockPaperScissorsDesc}
           techs={[ReactJs,Javascript,Analytics,Workbox]}
           repo='https://github.com/leandroperez19/rock-paper-scissors-pwa'
           demo='https://rock-papers-scissors-pwa.netlify.app'
@@ -74,8 +74,8 @@ export default function Home() {
         <ProjectCard 
           img={SpaceTourismWeb} 
           name='Space Tourism Web' 
-          subt='This is a space tourism web' 
-          description='This is a web where you can manage invoices, you can create, edit and eliminate an invoice by using a form. It was built using SASS, React, Redux and Strapi for the REST API where the invoices are keep.' 
+          subt={language.spaceTourismWebSubt}
+          description={language.spaceTourismWebDesc} 
           techs={[Gatsby,Typescript,Analytics]}
           repo='https://github.com/leandroperez19/space-tourism-web'
           demo='https://space-tourism-web-gatsby.netlify.app/'

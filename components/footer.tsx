@@ -11,7 +11,7 @@ export default function Footer(){
           <Link href="https://wa.me/584245069396" target='_blank'>
             <BsWhatsapp className="whatsapp"/>
           </Link>
-          <Link href="https://www.linkedin.com/in/leandro-p%C3%A9rez-barahona-743a37211/" target='_blank'>
+          <Link href="https://www.linkedin.com/in/leandro-perez-743a37211/" target='_blank'>
             <AiFillLinkedin className="linkedin" />
           </Link>
           <Link href="https://github.com/leandroperez19" target='_blank'>
