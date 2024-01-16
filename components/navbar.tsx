@@ -30,8 +30,8 @@ export default function Navbar(){
             target='_blank'
             href={
               language.lang === 'EN' ? 
-              'https://drive.google.com/file/d/18XqcDpdAVF0GD7sGpdwQBb3gLk0KMSH-/view?usp=share_link' : 
-              'https://drive.google.com/file/d/1Qm8JFSpm3x-jXtyV6Xh6FveH5ikb-lLW/view?usp=share_link'}>
+              'https://drive.google.com/file/d/16MVE7zZyta6jzneaU7IpJMJ2-Tv6rnS5/view?usp=drive_link' : 
+              'https://drive.google.com/file/d/1nHaemMJpUAuTYZJ70yl_JzP-VeJyfT1K/view?usp=drive_link'}>
                 {language.navbarLink3}
             </a>
           </li>
