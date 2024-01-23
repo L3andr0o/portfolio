@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { GlobalStyles } from '../assets/globalStyles'
 import HeadComponent from '../components/head'
@@ -10,6 +9,8 @@ import Description from '../components/description'
 import Techs from '../components/techs'
 import ProjectCard from '../components/projectCard'
 import TasksManager from '../assets/TasksManager.jpg';
+import WeatherApp from '../assets/WeatherApp.png'
+import Vue from '../assets/Vue.png'
 import CountriesApp from '../assets/CountriesApp.jpg';
 import RockPaperScissors from '../assets/RockPaperScissors.jpg';
 import SpaceTourismWeb from '../assets/SpaceTourismWeb.jpg';
@@ -22,7 +23,6 @@ import Analytics from '../assets/Analytics.png';
 import Workbox from '../assets/Workbox.svg';
 import Form from '../components/form'
 import Footer from '../components/footer'
-import Link from 'next/link'
 import { useLang } from '../context/langContext'
 
 
@@ -45,13 +45,13 @@ export default function Home() {
       </h4>
       <div className="projects" id='projects'>
         <ProjectCard 
-          img={TasksManager} 
-          name='Task Manager' 
-          subt={language.taskManagerSubt} 
-          description={language.taskManagerDesc}
-          techs={[ReactJs,Typescript,Firebase]}
-          repo='https://github.com/leandroperez19/tasks-manager'
-          demo='https://tasks-manager-kanban.netlify.app/'
+          img={WeatherApp} 
+          name='Weather App' 
+          subt={language.weatherAppSubt} 
+          description={language.weatherAppDesc}
+          techs={[Vue, Typescript]}
+          repo='https://github.com/leandroperez19/vue-3-weather-app'
+          demo='https://weather-web-app-vue3.netlify.app/'
         />      
         <ProjectCard 
           img={CountriesApp} 

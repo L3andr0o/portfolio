@@ -7,6 +7,8 @@ export default {
     presentation:'Hola, soy Leandro, un desarrolador front-end web!.',
     presentation2:'Soy un chico de Venezuela, he estado programando usando tecnologías Front-end como React, Redux, Next y Vue durante casi un año,escribir codigo es algo que realmente me encanta hacer, y eso me mantiene aprendiendo cosas nuevas todos los días.',
     projectsHeader: 'Mis Proyectos',
+    weatherAppSubt:'Mira el clima de cualquier ciudad!',
+    weatherAppDesc:'La aplicación del clima es una aplicación gratuita y fácil de usar que proporciona pronósticos meteorológicos precisos para cualquier ciudad del mundo. Con un solo toque, puede ver las condiciones meteorológicas actuales.',
     taskManagerSubt: 'Crea, lee y edita tus tareas!',
     taskManagerDesc: 'En esta web puedes administrar tareas, puedes crear, editar y eliminar una tarea a traves de un formulario. Fue hecha usando React junto a Typescript y Firebase para la API REST donde se guardan las tareas.',
     countriesAppSubt: 'Aprende sobre los paises del mundo!',
